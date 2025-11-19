@@ -1,43 +1,3 @@
-/*
-import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
-import Login from './pages/Login'
-import AdminDashboard from './pages/AdminDashboard'
-import QuestionImport from './pages/QuestionImport'
-import ExamCreate from './pages/ExamCreate'
-import StudentDashboard from './pages/StudentDashboard'
-import ExamTake from './pages/ExamTake'
-import ResultView from './pages/ResultView'
-
-const App = () => {
-  return (
-    <div className="min-h-screen bg-slate-100">
-      <nav style={{ padding: '2rem', background: '#d0d9ecff', color: 'black', fontSize: '30px' }}>
-        <Link to="/" style={{ marginRight: '1rem', fontWeight: 'bold' }}>Online Exam</Link>
-        <Link to="/login" style={{ marginRight: '1rem' }}>Login</Link>
-        <Link to="/admin" style={{ marginRight: '1rem' }}>Admin</Link>
-        <Link to="/student" style={{ marginRight: '1rem' }}>Student</Link>
-      </nav>
-      <main style={{ padding: '1rem' }}>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/admin/questions/import" element={<QuestionImport />} />
-          <Route path="/admin/exams/create" element={<ExamCreate />} />
-          <Route path="/student" element={<StudentDashboard />} />
-          <Route path="/student/exams/:examId" element={<ExamTake />} />
-          <Route path="/results/:submissionId" element={<ResultView />} />
-        </Routes>
-      </main>
-    </div>
-  )
-}
-
-export default App
-*/
-
-
 
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
@@ -53,7 +13,7 @@ const App = () => {
   return (
     <div className="bg-light" style={{ minHeight: "100vh" }}>
       
-      {/* Bootstrap Navbar */}
+      {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
           <Link className="navbar-brand fw-bold" to="/">

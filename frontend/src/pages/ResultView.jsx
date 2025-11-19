@@ -1,31 +1,3 @@
-/*
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import api from '../api/client'
-
-const ResultView = () => {
-  const { submissionId } = useParams()
-  const [submission, setSubmission] = useState(null)
-
-  useEffect(() => {
-    api.get(`/submissions/${submissionId}`).then(res => setSubmission(res.data)).catch(console.error)
-  }, [submissionId])
-
-  if (!submission) return <div>Loading...</div>
-
-  return (
-    <div>
-      <h2 className="text-xl font-bold mb-2">Exam Result</h2>
-      <p>Total Score: <span className="font-semibold">{submission.total_score ?? 'Pending'}</span></p>
-      <p>Status: {submission.status}</p>
-    </div>
-  )
-}
-
-export default ResultView
-*/
-
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../api/client";

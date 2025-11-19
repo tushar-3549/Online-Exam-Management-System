@@ -1,38 +1,3 @@
-/*
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import api from '../api/client'
-
-const StudentDashboard = () => {
-  const [exams, setExams] = useState([])
-
-  useEffect(() => {
-    api.get('/exams').then(res => setExams(res.data)).catch(console.error)
-  }, [])
-
-  return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Available Exams</h1>
-      <ul className="space-y-2">
-        {exams.map(exam => (
-          <li key={exam.id} className="bg-white rounded shadow p-3 flex items-center justify-between">
-            <div>
-              <div className="font-semibold">{exam.title}</div>
-              <div className="text-xs text-gray-500">Duration: {exam.duration_minutes} minutes</div>
-            </div>
-            <Link className="bg-blue-600 text-black px-3 py-1 rounded" to={`/student/exams/${exam.id}`}>
-              Start / Resume
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
-export default StudentDashboard
-*/
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../api/client";

@@ -12,8 +12,6 @@ export const AuthProvider = ({ children }) => {
     params.append('password', password)
     const res = await api.post('/auth/token', params)
     localStorage.setItem('token', res.data.access_token)
-    // naive role detection: ask backend by fetching /auth/me would be better
-    // but for now let user select role manually via login form or store separately
     setUser({ email })
   }
 
