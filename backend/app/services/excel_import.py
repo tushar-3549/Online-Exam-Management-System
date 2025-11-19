@@ -18,7 +18,6 @@ def parse_questions_excel(raw_bytes: bytes) -> Tuple[List[Dict[str, Any]], List[
     wb = load_workbook(filename=BytesIO(raw_bytes))
     ws = wb.active
 
-    # Map headers
     headers = {}
     for idx, cell in enumerate(ws[1], start=1):
         header = str(cell.value).strip() if cell.value else ""

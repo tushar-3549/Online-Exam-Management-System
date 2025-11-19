@@ -13,8 +13,8 @@ class Submission(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     exam_id = Column(UUID(as_uuid=True), ForeignKey("exams.id"), nullable=False)
     student_id = Column(UUID(as_uuid=True), ForeignKey("users.id"), nullable=False)
-    answers = Column(JSON, nullable=True)  # {question_id: answer or [answers]}
-    status = Column(String, default="in_progress")  # in_progress, submitted
+    answers = Column(JSON, nullable=True)  
+    status = Column(String, default="in_progress") 
     total_score = Column(Integer, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

@@ -20,5 +20,4 @@ def grade_submission(db: Session, submission: Submission) -> int:
         if question.type in ("single_choice", "multi_choice"):
             if normalize_answer(student_answer) == normalize_answer(question.correct_answers):
                 total_score += question.max_score or 1
-        # text/image_upload left for manual review
     return total_score

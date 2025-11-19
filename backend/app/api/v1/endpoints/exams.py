@@ -12,26 +12,6 @@ from app.schemas.exam import ExamCreate, ExamRead, ExamUpdate
 
 router = APIRouter()
 
-# @router.post("/", response_model=ExamRead)
-# def create_exam(exam_in: ExamCreate, db: Session = Depends(get_db), admin=Depends(get_current_admin)):
-#     questions = db.query(Question).filter(Question.id.in_(exam_in.question_ids)).all()
-#     if not questions:
-#         raise HTTPException(status_code=400, detail="No valid questions selected")
-#     exam = Exam(
-#         title=exam_in.title,
-#         description=exam_in.description,
-#         start_time=exam_in.start_time,
-#         end_time=exam_in.end_time,
-#         duration_minutes=exam_in.duration_minutes,
-#         is_published=exam_in.is_published,
-#         questions=questions,
-#     )
-#     db.add(exam)
-#     db.commit()
-#     db.refresh(exam)
-#     return exam
-
-
 @router.post("/", response_model=ExamRead)
 def create_exam(exam_in: ExamCreate, db: Session = Depends(get_db), admin=Depends(get_current_admin)):
     from datetime import timezone, timedelta
@@ -39,10 +19,8 @@ def create_exam(exam_in: ExamCreate, db: Session = Depends(get_db), admin=Depend
     BD_TZ = timezone(timedelta(hours=6))
 
     def normalize(dt):
-        # if dt is naive -> assign BD timezone
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=BD_TZ)
-        # convert to UTC
         return dt.astimezone(timezone.utc)
 
     start_utc = normalize(exam_in.start_time)
@@ -71,7 +49,6 @@ def create_exam(exam_in: ExamCreate, db: Session = Depends(get_db), admin=Depend
 
 @router.get("/", response_model=List[ExamRead])
 def list_exams(db: Session = Depends(get_db), current_user=Depends(get_current_active_user)):
-    # students only see published
     query = db.query(Exam)
     if current_user.role == "student":
         query = query.filter(Exam.is_published == True)

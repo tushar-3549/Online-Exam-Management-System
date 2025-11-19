@@ -21,7 +21,7 @@ def test_grade_single_choice():
     q = DummyQuestion("1", "single_choice", "A", 1)
     exam = DummyExam([q])
     sub = DummySubmission(exam, {"1": "A"})
-    score = grade_submission(None, sub)  # db not used
+    score = grade_submission(None, sub)  
     assert score == 1
 
 def test_grade_multi_choice_exact_match():

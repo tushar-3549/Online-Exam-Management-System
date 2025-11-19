@@ -10,9 +10,9 @@ class Question(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     title = Column(String, nullable=False)
     description = Column(Text, nullable=True)
-    complexity = Column(String, nullable=True)  # Class 1, Class 2...
-    type = Column(String, nullable=False)       # single_choice, multi_choice, text, image_upload
-    options = Column(JSON, nullable=True)       # list of strings
-    correct_answers = Column(JSON, nullable=True)  # single value or list
+    complexity = Column(String, nullable=True)  
+    type = Column(String, nullable=False)       
+    options = Column(JSON, nullable=True)      
+    correct_answers = Column(JSON, nullable=True)  
     max_score = Column(Integer, default=1)
-    tags = Column(JSON, nullable=True)          # list of tags
+    tags = Column(JSON, nullable=True)      
