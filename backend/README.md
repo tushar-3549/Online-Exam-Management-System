@@ -1,16 +1,24 @@
 # Backend - Online Exam Management System
 
+This is the backend API for the Online Exam System, built using FastAPI, SQLAlchemy, and PostgreSQL.
+It provides APIs for authentication, exam creation, question import, submissions, and automated grading.
+
+## Features
+
+- User Authentication (JWT)
+- Admin: Upload Questions (Excel)
+- Admin: Create & Publish Exams
+- Student: View & Attempt Exams
+- Autosave exam submissions every few seconds
+- Automatic grading for MCQ
+- API returns JSON responses
+- Time-based exam validation (start/end)
+
 ## Setup
 
-1. Create a PostgreSQL database, for example:
+1. Create a PostgreSQL database.
 
-   ```sql
-   CREATE DATABASE online_exam;
-   CREATE USER exam_user WITH PASSWORD 'exam_password';
-   GRANT ALL PRIVILEGES ON DATABASE online_exam TO exam_user;
-   ```
-
-2. Copy `.env.example` to `.env` and adjust values.
+2. Copy or create `.env` and adjust values.
 
 3. Create virtualenv and install dependencies:
 
@@ -36,3 +44,5 @@ Run:
 ```bash
 pytest
 ```
+
+
