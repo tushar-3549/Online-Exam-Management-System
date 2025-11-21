@@ -49,13 +49,13 @@ This repository contains a full-stack Online Exam System including:
 │   │   └── tests
 │   │       ├── test_excel_import.py
 │   │       └── test_grading.py
-│   ├── README.md              # backend documentation 
+│   ├── README.md                   # backend documentation
 │   └── requirements.txt
 ├── frontend
 │   ├── index.html
 │   ├── package.json
 │   ├── package-lock.json
-│   ├── README.md              # frontend documentation
+│   ├── README.md                  # frontend documentation
 │   ├── src
 │   │   ├── api
 │   │   │   └── client.js
@@ -72,8 +72,18 @@ This repository contains a full-stack Online Exam System including:
 │   │       ├── ResultView.jsx
 │   │       └── StudentDashboard.jsx
 │   └── vite.config.js
-├── README.md                 # root documentation
+├── photos
+│   ├── api-swagger.png
+│   ├── image-1.png
+│   ├── image-2.png
+│   ├── image-3.png
+│   ├── image-4.png
+│   ├── image-5.png
+│   ├── image-6.png
+│   └── image.png
+├── README.md                   # root documentation
 └── sample_questions.xlsx
+
 
 ```
 
@@ -160,7 +170,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=60
 - API Docs -`http://127.0.0.1:8000/docs`
 
 
-![alt text](<Screenshot from 2025-11-20 13-22-21.png>)
+![alt text](<photos/api-swagger.png>)
 
 
 **Frontend Setup**
@@ -185,22 +195,22 @@ baseURL: "http://127.0.0.1:8000/api/v1"
 ### Screenshots
 
 ***Login Page***
-![alt text](image.png)
+![alt text](photos/image.png)
 
 ***Admin Dashboard***
-![alt text](image-1.png)
+![alt text](photos/image-1.png)
 
 ***Admin - Import Ques***
-![alt text](image-2.png)
+![alt text](photos/image-2.png)
 
 ***Create Exam***
-![alt text](image-3.png)
+![alt text](photos/image-3.png)
 
 ***Student Dashboard***
-![alt text](image-4.png)
+![alt text](photos/image-4.png)
 
 ***Exam Attempt***
-
-
+![alt text](photos/image-5.png)
 
 ***Result Page***
+![alt text](photos/image-6.png)
